@@ -17,26 +17,19 @@ bool check_brackets(string str) {
         auto it = opening_brackets.find(str[i]);
 
         if (it != opening_brackets.end()) {
-
             mystack.push(*it);
-
         } else if (mystack.empty()) {
-
             return false;
-
         } else {
-
             char top = mystack.top();
             mystack.pop();
 
             if ((top == '[' and str[i] != ']') ||
                 (top == '(' and str[i] != ')') ||
                 (top == '{' and str[i] != '}')) {
-
                 return false;
             }
         }
-
     }
 
     return mystack.empty();
