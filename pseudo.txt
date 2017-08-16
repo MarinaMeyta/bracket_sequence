@@ -1,0 +1,13 @@
+isBalanced(str):
+    Stack stack
+    for char in str:
+        if char is in {'(', '{', '['}:
+            stack.Push(char)
+        else:
+            if stack.isEmpty(): return false
+            top = stack.Pop()
+            if (top = '[' and char != ']') or
+               (top = '(' and char != ')') or
+               (top = '{' and char != '}'):
+                return false
+    return stack.isEmpty()
