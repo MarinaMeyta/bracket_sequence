@@ -3,9 +3,7 @@
 #include <string>
 #include <set>
 
-
 using namespace std;
-
 
 bool check_brackets(string str) {
 
@@ -31,13 +29,11 @@ bool check_brackets(string str) {
             }
         }
     }
-
     return mystack.empty();
 }
 
 
 int main(int argc, char* argv[]) {
-
     if (check_brackets(argv[1])) {
         cout << "True" << endl;
     }
